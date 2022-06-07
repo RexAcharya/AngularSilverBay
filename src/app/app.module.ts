@@ -15,6 +15,9 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterAdminComponent } from './register-admin/register-admin.component';
 import { RegisterSuperAdminComponent } from './register-super-admin/register-super-admin.component';
 import { AuthGuardService } from './services/auth-guard.service';
+import { HomeConsultantComponent } from './home-consultant/home-consultant.component';
+import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { HomeSuperAdminComponent } from './home-super-admin/home-super-admin.component';
 
 export function tokenGetter(){
   return localStorage.getItem("jwt");
@@ -27,7 +30,11 @@ export function tokenGetter(){
     LoginComponent,
     RegisterComponent,
     RegisterAdminComponent,
-    RegisterSuperAdminComponent
+    RegisterSuperAdminComponent,
+   
+    HomeConsultantComponent,
+    HomeAdminComponent,
+    HomeSuperAdminComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +53,7 @@ export function tokenGetter(){
     JwtModule.forRoot({
       config:{
         tokenGetter:tokenGetter,
-        allowedDomains:["localhost:2832"],
+        allowedDomains:["localhost:18351"],
         disallowedRoutes:[]
       }
     })

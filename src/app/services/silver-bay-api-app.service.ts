@@ -9,7 +9,7 @@ import { RegisterSuperAdmin } from '../models/register-super-admin.model';
 })
 export class SilverBayApiAppService {
 
-  readonly authURL = "http://localhost:2832/api/Authentication";
+  readonly authURL = "http://localhost:18351/api/Authentication";
   
   constructor(private http:HttpClient) { }
 
